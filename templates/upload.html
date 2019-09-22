@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Mobile Money</title>
+   <link rel="stylesheet" type="text/css" href="static/style.css">
+ </head>
+ <body>
+   <header>
+     <center>
+        <h1 style="font-size:50px;">FINANCIAL SERVICE PREDICTOR</h1> 
+       {% if msg %}
+        <h1>{{ msg }}</h1>
+        {% endif %}
+        <div>
+            <h2>Upload User Data</h2>
+       
+            <form method=post enctype=multipart/form-data>
+              <p><input type=file name=file>
+                 <input type=submit value=Upload>
+            </form>
+         
+            <h1>Result:</h1>
+            
+            
+            {% for table in tables %}
+               {{titles.index}}
+               {{ table|safe }}
+             {% endfor %}
+
+        </div>
+       
+          
+
+     </center>
+    
+   </header>
+
+  
+ </body>
+</html>
